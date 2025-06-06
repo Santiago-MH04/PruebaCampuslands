@@ -1,9 +1,7 @@
 package com.campuslands.santiago.abarrotes_app.DTOs;
 
 import com.campuslands.santiago.abarrotes_app.entities.utils.Categoria;
-import jakarta.persistence.Column;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

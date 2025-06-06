@@ -1,9 +1,7 @@
 package com.campuslands.santiago.abarrotes_app.DTOs;
 
 import com.campuslands.santiago.abarrotes_app.entities.Producto;
-import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
-import jakarta.persistence.ManyToOne;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
