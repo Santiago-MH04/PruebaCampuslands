@@ -33,7 +33,7 @@ public class ProductoController {
 
      @GetMapping("/filtrar")
      @ResponseStatus(value = HttpStatus.OK)
-     public List<Producto> findByCategoria(@RequestParam(name = "nombreCategoria", defaultValue = "OTROS") String categoria){
+     public List<Producto> findByCategoria(@RequestParam(name = "categoria", defaultValue = "OTROS") Categoria categoria){
             // Por defecto, se le asigna la categoría OTROS
         return this.servicioProducto.findByCategoria(categoria);
      }

@@ -13,9 +13,10 @@ import java.time.LocalDateTime;
 @Builder
 public class Error {
         //Atributos de Error
-    private LocalDateTime fecha;
+    private String nombre;
     private int httpStatus;
     private String mensaje;
+    private LocalDateTime fecha;
 
     //Constructores de Error
     //Asignadores de atributos de Error (setters)

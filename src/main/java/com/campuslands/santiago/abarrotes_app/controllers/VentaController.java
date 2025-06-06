@@ -38,7 +38,7 @@ public class VentaController {
     }
 
     @PostMapping
-    public ResponseEntity<Venta> registerVenta(VentaDTO ventaDTO){
+    public ResponseEntity<Venta> registerVenta(@RequestBody VentaDTO ventaDTO){
         Venta venta = this.servicioVenta.register(ventaDTO);
         if(venta.getId() != null){
             return ResponseEntity.ok(venta);

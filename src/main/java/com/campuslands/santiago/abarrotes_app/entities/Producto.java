@@ -25,11 +25,11 @@ public class Producto {
     @Column(name = "cantidad_stock")
     private Integer cantidadEnStock;
     @Enumerated(EnumType.STRING)
+    @Column(name = "categoria")
     private Categoria nombreCategoria;
 
     //Constructores de Producto
     //Asignadores de atributos de Producto (setters)
     //Lectores de atributos de Producto (getters)
     //Métodos de Producto
-    
 }

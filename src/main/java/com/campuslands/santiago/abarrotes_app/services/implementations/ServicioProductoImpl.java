@@ -32,7 +32,7 @@ public class ServicioProductoImpl implements ServicioProducto {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Producto> findByCategoria(String categoria) {
+    public List<Producto> findByCategoria(Categoria categoria) {
         return this.repoProducto.findByCategoria(categoria);
     }
 
