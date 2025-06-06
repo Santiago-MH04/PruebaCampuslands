@@ -15,6 +15,6 @@ public interface ProductoRepositorio extends JpaRepository<Producto, Long> {
     //Asignadores de atributos de ProductoRepositorio (setters)
     //Lectores de atributos de ProductoRepositorio (getters)
         //Métodos de ProductoRepositorio
-    @Query("SELECT p FROM Producto p WHERE p.categoria = :1")
+    /*@Query("SELECT p FROM Producto p WHERE p.categoria = :1")*/
     public List<Producto> findByCategoria(String categoria);
 }

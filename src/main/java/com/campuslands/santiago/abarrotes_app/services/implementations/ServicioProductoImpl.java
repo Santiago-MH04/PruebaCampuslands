@@ -32,8 +32,8 @@ public class ServicioProductoImpl implements ServicioProducto {
 
     @Override
     @Transactional(readOnly = true)
-    public List<Producto> findByCategoria(Categoria categoria) {
-        return this.repoProducto.findByCategoria(String.valueOf(categoria));
+    public List<Producto> findByCategoria(String categoria) {
+        return this.repoProducto.findByCategoria(categoria);
     }
 
     @Override
@@ -44,17 +44,9 @@ public class ServicioProductoImpl implements ServicioProducto {
 
     @Override
     @Transactional()
-    public Producto create(ProductoDTO productoDTO) {
-        return this.repoProducto.save(
-            buildProducto(productoDTO)
-        );
-    }
-
-    @Override
-    @Transactional()
-    public Optional<Producto> update(ProductoDTO productoDTO) {
-        return this.repoProducto.findById(productoDTO.getId())
-                .map(p -> this.repoProducto.save(buildProducto(productoDTO)));
+    public Producto register(ProductoDTO productoDTO) {
+            //Si el producto no tiene id, lo crea en base de datos. De lo contrario, lo actualiza
+        return this.repoProducto.save(buildProducto(productoDTO));
     }
 
     @Override
@@ -65,6 +57,7 @@ public class ServicioProductoImpl implements ServicioProducto {
 
     private static Producto buildProducto(ProductoDTO productoDTO) {
         return Producto.builder()
+                .id(productoDTO.getId())
                 .nombre(productoDTO.getNombre())
                 .sku(productoDTO.getSku())
                 .precioUnitario(productoDTO.getPrecioUnitario())

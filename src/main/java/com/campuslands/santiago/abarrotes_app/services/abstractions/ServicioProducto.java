@@ -14,9 +14,8 @@ public interface ServicioProducto {
     //Lectores de atributos de ServicioProducto (getters)
         //Métodos de ServicioProducto
     List<Producto> findAll();
-    List<Producto> findByCategoria(Categoria categoria);
+    List<Producto> findByCategoria(String categoria);
     Optional<Producto> findById(Long id);
-    Producto create(ProductoDTO productoDTO);
-    Optional<Producto> update(ProductoDTO productoDTO);
+    Producto register(ProductoDTO productoDTO);
     void deleteById(Long id);
 }

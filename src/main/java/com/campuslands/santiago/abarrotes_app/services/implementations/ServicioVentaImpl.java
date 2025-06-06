@@ -33,7 +33,7 @@ public class ServicioVentaImpl implements ServicioVenta {
 
     @Override
     public List<Venta> findByIdentificadorCliente(String clienteID) {
-        return List.of();
+        return this.repoVenta.findByidentificadorCliente(clienteID);
     }
 
     @Override
